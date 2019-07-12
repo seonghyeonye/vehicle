@@ -1,48 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:drawableRight="@drawable/ic_search_black_30dp"
-        android:id="@+id/filtering"
-        android:hint="Search"
-        android:padding="15dp"
-        android:background="@drawable/blue_taeduri"
-        android:lines="1"
-        android:inputType="text"
-        android:layout_margintop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="60dp"
-        android:id="@+id/recyclerView_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#B3B0B0" />
-    <!--app:fastScrollEnabled="true"/>-->
-    <!--app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"-->
-    <!--app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"-->
-    <!--app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"-->
-    <!--app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"/>-->
-
-    <com.github.clans.fab.FloatingActionMenu
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/material_design_android_floating_action_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="11dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginRight="11dp"
         fab:menu_animationDelayPerItem="55"
         fab:menu_backgroundColor="@android:color/transparent"
@@ -75,7 +45,7 @@
         fab:menu_shadowYOffset="4dp"
         fab:menu_showShadow="true">
 
-        <com.github.clans.fab.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/material_design_floating_action_menu_item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,7 +53,7 @@
             fab:fab_label="Menu Item 1"
             fab:fab_size="mini" />
 
-        <com.github.clans.fab.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/material_design_floating_action_menu_item2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,11 +61,12 @@
             fab:fab_label="Menu Item 2"
             fab:fab_size="mini" />
 
-        <com.github.clans.fab.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/material_design_floating_action_menu_item3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_action_edit"
             fab:fab_label="Menu Item 3"
             fab:fab_size="mini" />
-    </com.github.clans.fab.FloatingActionMenu>
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</RelativeLayout>
